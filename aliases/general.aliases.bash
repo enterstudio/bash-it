@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # List directory contents
-alias sl=ls
+alias sl='ls'
 alias ls='ls -G'        # Compact view, show colors
 alias la='ls -AF'       # Compact view, show hidden
 alias ll='ls -al'
@@ -32,7 +32,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # Directory
 alias	md='mkdir -p'
-alias	rd=rmdir
+alias	rd='rmdir'
 alias d='dirs -v'
 
 function aliases-help() {

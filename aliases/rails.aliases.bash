@@ -12,7 +12,7 @@ alias ra='rails application'
 alias rd='rails destroy'
 
 alias ss='script/server'
-alias ts="thin start"     # thin server
+alias ts='thin start'     # thin server
 alias sc='script/console'
 alias restartapp='touch tmp/restart.txt'
 alias restart='touch tmp/restart.txt'  # restart passenger
