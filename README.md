@@ -1,6 +1,6 @@
 # Bash it
 
-'Bash it' is a mash up of my own bash commands and scripts, other bash stuff I have found and a shameless ripoff of oh-my-zsh. :)
+'Bash it' is a mash up of my own bash commands and scripts, other bash stuff I have found and a shameless ripoff of [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh). :)
 
 Includes some autocompletion tools, theming support, aliases, custom functions, a few stolen pieces from Steve Losh, and more.
 
@@ -20,6 +20,7 @@ Check a clone of this repo. You can view what a sample `~/.bash_profile` looks l
 	aliases-help
 	rails-help
 	git-help
+    plugins-help
 
 ## Your Custom scripts, aliases, and functions
 
@@ -52,6 +53,7 @@ If you are submitting a pull request, please add your name to the list.
 * [Piotr Usewicz][pusewicz]
 * [Simon H. Eskildsen][sirupsen]
 * [Mark Szymanski][mrman208]
+* [Florian Baumann][noqqe]
 
 [revans]: http://github.com/revans
 [zerobearing2]: http://github.com/zerobearing2
@@ -59,4 +61,5 @@ If you are submitting a pull request, please add your name to the list.
 [pusewicz]: http://github.com/pusewicz
 [sirupsen]: http://github.com/sirupsen
 [mrman208]: http://github.com/mrman208
+[noqqe]: http://github.com/noqqe
 

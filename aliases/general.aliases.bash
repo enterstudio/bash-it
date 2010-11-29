@@ -8,13 +8,20 @@ alias ll='ls -al'
 alias l='ls -a'
 alias l1='ls -1'
 
+if [ $(uname) = "Linux" ]
+then
+	alias ls="ls --color=always"
+fi
+
 alias c='clear'
 alias k='clear'
 
-alias editor="$EDITOR"
-alias pager="$PAGER"
+alias edit="$EDITOR"
+alias page="$PAGER"
 
 alias q="exit"
+
+alias irc="$IRC_CLIENT"
 
 # Pianobar can be found here: http://github.com/PromyLOPh/pianobar/
 
@@ -38,18 +45,23 @@ alias d='dirs -v'
 function aliases-help() {
   echo "Generic Alias Usage"
   echo
-  echo "  sl    = ls"
-  echo "  ls    = ls -G"
-  echo "  la    = ls -AF"
-  echo "  ll    = ls -al"
-  echo "  l     = ls -a"
-  echo "  c/k   = clear"
-  echo "  ..    = cd .."
-  echo "  ...   = cd ../.."
-  echo "  -     = cd -"
-  echo "  h     = history"
-  echo "  md    = mkdir -p"
-  echo "  rd    = rmdir"
-  echo "  d     = dirs -v"
+  echo "  sl     = ls"
+  echo "  ls     = ls -G"
+  echo "  la     = ls -AF"
+  echo "  ll     = ls -al"
+  echo "  l      = ls -a"
+  echo "  c/k    = clear"
+  echo "  ..     = cd .."
+  echo "  ...    = cd ../.."
+  echo "  -      = cd -"
+  echo "  h      = history"
+  echo "  md     = mkdir -p"
+  echo "  rd     = rmdir"
+  echo "  d      = dirs -v"
+  echo "  editor = $EDITOR"
+  echo "  pager  = $PAGER"
+  echo "  piano  = pianobar"
+  echo "  q      = exit"
+  echo "  irc    = $IRC_CLIENT"
   echo 
 }
