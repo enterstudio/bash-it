@@ -26,8 +26,6 @@ export GIT_EDITOR='/usr/local/bin/mvim -f'
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
-<<<<<<< HEAD
-=======
 # Change this to the path of your local jekyll root to use the jekyll aliases
 
 export JEKYLL_LOCAL_ROOT="$HOME/Sites/jekyllsite"
@@ -49,6 +47,8 @@ export IRC_CLIENT='irssi'
 
 export TODO="t"
 
->>>>>>> 835bcabf04f405dc97b7082f7d49d7f5cc87e5cd
+# Set store directory for handmade commandline history tool 
+export hchtstoredir="$HOME/.hcht"
+
 # Load Bash It
 source $BASH/bash_it.sh
