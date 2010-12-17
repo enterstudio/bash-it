@@ -54,6 +54,8 @@ If you are submitting a pull request, please add your name to the list.
 * [Simon H. Eskildsen][sirupsen]
 * [Mark Szymanski][mrman208]
 * [Florian Baumann][noqqe]
+* [Andy Shen][shenie]
+* [John Schulz][jfsiii]
 
 [revans]: http://github.com/revans
 [zerobearing2]: http://github.com/zerobearing2
@@ -62,4 +64,6 @@ If you are submitting a pull request, please add your name to the list.
 [sirupsen]: http://github.com/sirupsen
 [mrman208]: http://github.com/mrman208
 [noqqe]: http://github.com/noqqe
+[shenie]: http://github.com/shenie
+[jfsiii]: http://github.com/jfsiii
 
