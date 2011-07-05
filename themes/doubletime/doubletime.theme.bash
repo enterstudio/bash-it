@@ -1,9 +1,9 @@
 #!/bin/bash
 SCM_THEME_PROMPT_DIRTY=''
 SCM_THEME_PROMPT_CLEAN=''
-SCM_GIT_CHAR='${bold_cyan}±${normal}'
-SCM_SVN_CHAR='${bold_cyan}⑆${normal}'
-SCM_HG_CHAR='${bold_red}☿${normal}'
+SCM_GIT_CHAR="${bold_cyan}±${normal}"
+SCM_SVN_CHAR="${bold_cyan}⑆${normal}"
+SCM_HG_CHAR="${bold_red}☿${normal}"
 SCM_THEME_PROMPT_PREFIX=""
 SCM_THEME_PROMPT_SUFFIX=""
 RVM_THEME_PROMPT_PREFIX=" ("
@@ -17,11 +17,12 @@ fi
 
 doubletime_scm_prompt() {
   CHAR=$(scm_char)
-  if [ $CHAR = $SCM_NONE_CHAR ]
-  then
+  if [ $CHAR = $SCM_NONE_CHAR ]; then
     return
-  else
+  elif [ $CHAR = $SCM_GIT_CHAR ]; then
     echo "$(git_prompt_status)"
+  else
+    echo "[$(scm_prompt_info)]"
   fi
 }
 
@@ -32,14 +33,20 @@ virtualenv_prompt() {
   fi
 }
 
-prompt_setter() {
+function prompt_setter() {
   # Save history
   history -a
   history -c
   history -r
+  if [[ -z "$THEME_PROMPT_CLOCK_FORMAT" ]]
+  then
+      clock="\t"
+  else
+      clock=$THEME_PROMPT_CLOCK_FORMAT
+  fi
   PS1="
-\t $(scm_char) [\[$THEME_PROMPT_HOST_COLOR\]\u@${THEME_PROMPT_HOST}\[$reset_color\]] $(virtualenv_prompt)\w
-$(doubletime_scm_prompt)\[$reset_color\] $ "
+$clock $(scm_char) [$THEME_PROMPT_HOST_COLOR\u@${THEME_PROMPT_HOST}$reset_color] $(virtualenv_prompt)\w
+$(doubletime_scm_prompt)$reset_color $ "
   PS2='> '
   PS4='+ '
 }
